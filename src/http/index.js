@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const http = axios.create({
-    baseURL: 'http://localhost:8000',
+    baseURL: 'http://localhost:8000/',
     headers: {
         'Accept': 'application/json',
         'Content': 'application/json'
@@ -9,9 +9,9 @@ const http = axios.create({
 })
 
 http.interceptors.request.use(function (config) {
-    const token =localStorage.getItem('token')
+    const token = localStorage.getItem('token')
     if (token) {
-        config.headers.Authorization = 'Bearer ${token}'
+        config.headers.Authorization = `Bearer ${token}`
     }
     return config
 }, function (erro) {
