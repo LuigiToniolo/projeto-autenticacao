@@ -4,7 +4,7 @@ import router from './router'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import http from '@/http'
-import store from './store.js'
+import store from './store'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = http
